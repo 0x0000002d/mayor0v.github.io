@@ -1,0 +1,120 @@
+.our-team
+  overflow: hidden
+
+  &__inner
+    +section-center()
+    padding-top: 83px
+    padding-bottom: 57px
+
+
+  &__desc
+    text-align: center
+    margin-bottom: 73px
+
+  &__desc-title
+    +section-title()
+    margin-bottom: 5px
+
+  &__desc-subtitle
+    +section-text()
+
+  &__sliders-container
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: center
+
+  &__teammates
+    min-height: 208px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    padding: 0
+    margin: 0
+    padding-left: 12px
+    margin-bottom: 26px
+
+  &__teammate
+    color: $accent-color
+    list-style: none
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 200px
+    height: 200px
+    
+    .our-team__teammate-img
+      transform: scale(0.8333)
+      transition: all .5s ease-in-out
+      opacity: 0.2
+
+  &__teammate--active
+    .our-team__teammate-img
+      transform: scale(1)
+      opacity: 1
+      border: 20px solid #ffffff
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), inset 0 0 13px 5px rgba(0, 0, 0, 0.69)
+      border-radius: 50%
+      
+
+  &__teammate-title
+    +text-style(18px, raleway-bold, $accent-color)
+    margin: 0
+    margin-bottom: 9px
+
+  &__teammates-desc
+    padding: 0
+    margin: 0
+    display: flex
+    justify-content: center
+
+  &__teammate-desc
+    max-width: 660px
+    list-style: none
+    +text-style(15px, raleway-reg, $gray)
+    text-align: center
+
+  &__teammate-desc-text
+    margin: 0
+    margin-bottom: 22px
+
+  &__teammate-desc--active
+    display: block
+
+  &__teammate-desc--close
+    display: none
+
+  &__teammate-social
+    font-size: 20px
+    padding: 0
+    display: flex
+    justify-content: center
+
+  &__teammate-social-item
+    list-style: none
+    padding: 0
+    &:not(:last-child)
+      margin-right: 30px
+
+  &__teammate-social-link
+    color: #90a4ae
+    text-decoration: none
+    transition: color .5s ease-in-out
+
+    &:hover
+      color: $accent-color
+
+@media (max-width: 511px)
+  .our-team
+
+    &__teammates
+      justify-content: center
+      padding-left: 0
+
+    &__teammate
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 200px
+      height: 200px

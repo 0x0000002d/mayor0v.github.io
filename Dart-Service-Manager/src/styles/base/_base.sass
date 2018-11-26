@@ -1,0 +1,35 @@
+*
+  box-sizing: border-box
+
+  &:before, &:after
+    box-sizing: border-box
+
+
+html, body
+  height: 100%
+  width: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  background: white
+  scroll-behavior: smooth
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.wrapper
+  max-width: 1460px
+  padding-left: 10px
+  padding-right: 10px
+  margin: 0 auto
+
+::selection
+  background-color: $accent-color
+  color: #fff

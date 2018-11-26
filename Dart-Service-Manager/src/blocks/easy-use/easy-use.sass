@@ -1,0 +1,107 @@
+.easy-use
+
+  &__inner
+    padding-top: 82px
+    padding-bottom: 95px
+
+  &__desc
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    margin-bottom: 89px
+
+  &__desc-title
+    @include section-title()
+
+  &__desc-subtitle
+    @include section-subtitle()
+
+  &__desc-text
+    @include section-text()
+
+  &__list
+    padding: 0
+    margin: 0
+    margin-bottom: 70px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__item
+    list-style: none
+    position: relative
+    text-align: center
+    min-width: 200px
+    width: 25%
+
+    padding-top: 115px
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 8px
+
+
+  &__item--note
+    &:before
+      background-image: url('../img/2.png')
+      width: 68px
+      height: 70px
+      left: calc(50% - 38px)
+
+  &__item--person
+    &:before
+      background-image: url('../img/1.png')
+      width: 58px
+      height: 80px
+      left: calc(50% - 28px)
+      top: 2px
+
+  &__item--builder
+    &:before
+      background-image: url('../img/3.png')
+      width: 68px
+      height: 71px
+      left: calc(50% - 28px)
+
+  &__item-title
+    @include text-style(20px, raleway-semibold, $accent-color)
+    margin: 0
+
+  &__item-text
+    @include text-style(15px, raleway-reg, $darken-gray)
+    margin: 0
+
+
+  &__button
+    display: block
+    width: 150px
+
+    background: #1de9b6
+    color: #ffffff
+
+    border: 1px solid #1de9b6
+    margin: 0 auto
+
+    transition: background .5s ease-in-out, color .5s ease-in-out
+
+    &:hover
+      background: #ffffff
+      color: #1de9b6
+
+
+@media (max-width: 620px)
+  .easy-use__item--builder
+    margin: 0 auto
+
+@media (max-width: 420px)
+  .easy-use__item:not(:first-child)
+    margin-top: 15px
+
+  .easy-use__list
+    justify-content: center
+
+  .easy-use__item--builder
+    margin: 0

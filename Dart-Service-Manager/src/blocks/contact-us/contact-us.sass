@@ -1,0 +1,121 @@
+.contact-us
+  background-color: #fafafa
+
+  &__inner
+    padding-top: 33px
+    padding-bottom: 100px
+
+  &__desc
+    +section-center()
+    margin-bottom: 45px
+
+  &__desc-title
+    +section-title()
+    margin-bottom: 6px
+
+  &__desc-text
+    +section-text()
+    color: $accent-color
+
+
+.form
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: center
+  max-width: 600px
+  margin: 0 auto
+
+  &__input
+    width: 280px
+    padding: 15px 18px
+    border: 1px solid $accent-color
+    border-radius: 5px
+    margin-bottom: 20px
+
+    &::placeholder
+      color: $accent-color
+      font-size: 14px
+      font-family: raleway-medium
+
+    
+
+  &__input-textarea
+    width: 100%
+    height: 150px
+
+  &__button
+    background-color: #1de9b6
+    color: #ffffff
+    width: 130px
+    transition: all .5s ease-in-out
+    padding-top: 18px
+    padding-bottom: 14px
+
+    &:hover
+      color: #1de9b6
+      background: #ffffff
+
+  &__checkbox-label 
+    position: relative
+
+    input
+      position: absolute
+      z-index: -1
+      opacity: 0
+      margin: 10px 0 0 20px
+
+
+    input:checked + .form__checkbox-text + .form__checkbox-checkmark::after
+      width: 8px
+
+    input:checked + .form__checkbox-text + .form__checkbox-checkmark::before
+      width: 14px
+
+
+  &__checkbox-text
+    position: relative
+    padding: 0 0 0 25px
+    cursor: pointer
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0px
+      left: 0
+      width: 16px
+      height: 16px
+      border: 1px solid $accent-color
+      transition: .2s
+
+  &__checkbox-checkmark
+    &::after, &::before
+      content: ''
+      position: absolute
+      background: $accent-color
+
+    &::after
+      left: 2px
+      top: 13px
+
+      width: 0px
+      height: 1px
+
+      transform: rotate(30deg)
+      transition: width .1s ease-in-out
+      
+    &::before
+      left: 7px
+      top: 10px
+
+      width: 0px
+      height: 1px
+
+      transform: rotate(-50deg)
+      transition: width .1s ease-in-out
+      transition-delay: .1s
+
+
+@media (max-width: 586px)
+  .form__input
+    width: 100%

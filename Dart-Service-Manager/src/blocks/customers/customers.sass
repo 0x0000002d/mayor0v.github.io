@@ -1,0 +1,191 @@
+.customers
+  background-image: linear-gradient(-53deg, rgba(0, 184, 212, 0.95) 0%, rgba(29, 233, 182, 0.95) 100%), url('../img/customers-bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+
+  color: #ffffff
+
+  &__inner
+    padding-top: 40px
+    padding-bottom: 83px
+
+    display: flex
+    justify-content: space-between
+
+  &__desc
+    max-width: 530px
+    padding-top: 84px
+
+  &__desc-title
+    margin: 0
+    margin-bottom: 12px
+
+    font-size: 45px
+    font-family: raleway-semibold
+    line-height: 1.2
+
+  &__desc-text
+    margin: 0
+    margin-bottom: 75px
+
+    font-size: 15px
+    font-family: raleway-semibold
+
+  &__desc-button
+    width: 150px
+    padding-left: 24px
+    padding-right: 24px
+
+    background: $accent-color
+    color: #ffffff
+
+    transition: background .5s ease-in-out, color .5s ease-in-out
+
+    &:hover
+      color: $accent-color
+      background: #fff
+
+
+  &__slider
+    position: relative
+    margin-top: 37px
+    max-width: 770px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__list
+    margin: 0
+    padding: 0
+    overflow: hidden
+    max-height: 400px
+
+  &__list-item
+
+    &:not(:last-child)
+      margin-bottom: 70px
+
+
+.customer
+  align-items: center
+  display: flex !important
+  justify-content: space-between
+  flex-wrap: wrap
+
+  list-style: none
+
+  &__desc
+    width: 85%
+    padding-top: 24px
+    padding-bottom: 30px
+    padding-left: 30px
+    padding-right: 30px
+
+    background: #fff
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+    border-radius: 5px
+
+  &__name
+    margin: 0
+    margin-bottom: 5px
+
+    color: $accent-color
+    font-size: 18px
+    font-family: raleway-bold
+
+  &__text
+    margin: 0
+
+    color: #78909c
+    font-size: 15px
+    font-family: raleway-italic
+
+
+.js-slider__nav
+  position: absolute
+  right: calc(50% - 12px)
+
+  width: 23px
+  height: 14px
+
+  &:hover
+    cursor: pointer
+
+  &::before
+
+  &::after
+
+  &::before, &::after
+    content: ''
+
+    position: absolute
+
+    height: 16px
+    width: 4px
+
+    background: #fff
+
+  &--top
+    top: -10px
+
+    &::before
+      transform: rotate(45deg)
+      left: 63px
+      bottom: 30px
+
+    &::after
+      transform: rotate(-45deg)
+      left: 72px
+      bottom: 30px
+
+  &--bottom
+    bottom: -21px 
+
+    &::before
+      transform: rotate(45deg)
+      left: 74px
+      top: 19px
+
+    &::after
+      transform: rotate(-45deg)
+      left: 64px
+      top: 19px
+
+.customers .slick-slide
+  width: auto !important
+
+  &:not(:last-child)
+    margin-bottom: 66px !important
+
+// .customers .slick-list
+//   height: 200px !important
+
+
+// .customers .slick-slide
+//     &:not(:last-child)
+//         margin-bottom: 30px!important
+
+
+
+.dn
+  display: none
+
+@media (max-width: 530px)
+  .customers .slick-list
+
+@media (max-width: 670px)
+  .customers .slick-slide
+    display: flex
+    justify-content: center
+
+    &:not(:last-child)
+      margin-bottom: 2px!important
+      margin-top: 5px
+
+@media (max-width: 1120px)
+  .customers
+
+    &__inner
+      flex-wrap: wrap
+      justify-content: center
+  

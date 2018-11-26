@@ -1,0 +1,59 @@
+.form-modal
+  position: fixed
+  z-index: 2
+  right: calc(50% - 320px)
+  top: calc(50% - 131px)
+
+  transform: scale(0)
+
+  padding-top: 45px
+  padding-bottom: 45px
+  width: 640px
+  max-width: 640px
+
+  border-radius: 5px
+
+  background: #ffffff
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+
+  text-align: center
+
+  transition: all .5s ease-in-out
+
+  &__title
+    font-size: 28px
+    color: $accent-color
+    margin: 0
+    margin-bottom: 15px
+
+  &__text
+    font-size: 18px
+    color: lighten($accent-color, 20%)
+    margin: 0
+    margin-bottom: 25px
+
+  &__button
+    width: 140px
+    background: #1DE9B6
+    color: #ffffff
+    transition: all .5s ease-in-out
+
+    &:hover
+      background: #ffffff
+      color: #1DE9B6
+
+  &__x
+    position: absolute
+    right: 25px
+    top: 25px
+
+    color: $accent-color
+    text-decoration: none
+
+    transition: color .5s ease-in-out
+
+    &:hover
+      color: lighten($accent-color, 20%)
+
+  &--active
+    transform: scale(1)

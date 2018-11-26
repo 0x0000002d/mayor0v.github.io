@@ -1,0 +1,202 @@
+.page-header
+  position: relative
+
+  background-image: linear-gradient(135deg, rgba(25, 229, 193, 1) 0%, rgba(6, 174, 190, 0.9) 94%), url('../img/page-header-bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+
+  overflow: hidden
+
+  color: #ffffff
+
+  .page-header
+    &__inner
+      padding-top: 48px
+      padding-bottom: 186px
+
+  &__top
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: 156px
+
+  &__signup-button
+    display: block
+    padding: 2px 18px
+
+    border: 1px solid #ffffff
+    border-radius: 2px
+
+    font-family: raleway-reg
+    font-size: 12px
+    color: #ffffff
+    text-decoration: none
+
+    transition: background .5s ease-in-out, color .5s ease
+
+    &:hover
+      background: #ffffff
+      color: $accent-color
+      text-stroke: 1px white
+
+  &__main
+    display: flex
+    justify-content: space-between
+
+  &__desc
+
+  &__desc-title
+    margin: 0
+    margin-bottom: 7px
+
+    font-size: 55px
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: 1.6px
+    font-family: raleway-extrabold
+    line-height: 1.2
+
+  &__desc-text
+    margin: 0
+    margin-bottom: 32px
+    max-width: 590px
+
+    font-size: 18px
+    font-family: raleway-reg
+    line-height: 1.9
+
+  &__desc-button
+    margin-right: 30px
+
+    transition: background .5s ease, color .5s ease
+
+  &__desc-button--buy
+    width: 150px
+
+    background: $accent-color
+    color: #ffffff
+
+    &:hover
+      background: #ffffff
+      color: $accent-color
+
+  &__desc-button--try
+    width: 160px
+
+    background: #ffffff
+    color: $accent-color
+
+    &:hover
+      background: $accent-color
+      color: #ffffff
+
+  &__nav-button
+    display: none
+
+@media (max-width: 920px)
+  .page-header
+
+    .logo-wrap
+      margin-right: 10%
+
+    &__top
+      // justify-content: space-between
+
+@media (max-width: 798px)
+  .page-header__signup
+    margin-top: 15px
+
+@media (max-width: 767px)
+  .page-header
+
+    .nav
+      width: 0
+      position: absolute
+      right: 0
+      overflow: hidden
+      top: 0
+      background: rgba(255, 255, 255, 0.9)
+
+      padding-top: 42px
+      padding-bottom: 75px
+
+      transition: all .5s ease-in-out
+      
+      &__list
+        display: block
+        padding-left: 25px
+
+      &__list-item
+        margin: 0
+        
+        &:not(:last-child)
+          margin-bottom: 10px
+
+      &__list-link
+        color: black
+        padding: 4px 16px
+        font-size: 18px
+
+      &--active
+        width: 300px
+
+      &--active + button + .page-header__signup
+        display: block
+        right: 180px
+        width: auto
+
+      &--active 
+
+        & + .page-header__nav-button
+          &::after
+            background: #000
+
+            box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000
+
+    &__nav-button
+      display: block
+      margin-left: auto                
+      padding: 14px
+      border: none
+      position: relative
+
+      width: 40px
+      height: 25px
+
+      background: transparent
+
+      &:after
+        content: ''
+
+        position: absolute
+        top: 4px
+        left: 0
+
+        width: 36px
+        height: 2px
+
+        background: #fff
+
+        box-shadow: 0 8px 0 0 #fff, 0 16px 0 0 #fff
+        transition: all .5s ease-in-out
+
+      &:focus
+        outline: none
+
+    &__signup
+      margin-top: 0
+      margin-left: 0
+      
+      position: absolute
+      right: -100%
+      top: 245px
+      z-index: 1
+      border: 1px solid black
+
+      transition: all .5s ease-in-out
+      
+      &-button
+        color: black
+
+    &__top
+      justify-content: space-between
